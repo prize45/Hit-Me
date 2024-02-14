@@ -12,9 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class int_lev1_info {
-	//helper
-//	JFrame frame;
-//	private goHandler gHandler = new goHandler();
+
 	//the Components
 	private font font = new font();
 	private JLabel intStage,infoLabel;
@@ -31,19 +29,6 @@ public class int_lev1_info {
 	//the constructor
 	public int_lev1_info(JFrame baseframe) {
 
-		//Setting up the frame	
-//		frame = new JFrame("ByteSquad");
-//		frame.setSize(800, 600);
-//		frame.setVisible(true);
-//		frame.getContentPane().setBackground(Color.black);
-//		frame.setLayout(null);
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setLocationRelativeTo(null);
-//		//Setting up the icon
-//		demoIcon = new ImageIcon(this.getClass().getResource("/Images/DEMON_1 _reZ.png")).getImage();//Imports the font file
-//		frame.setIconImage(demoIcon);
-		
-
 		//setting up the stageTitle image
 		intStage = new JLabel();
 		Image img = new ImageIcon(this.getClass().getResource("/Images/intermediateTitle.png")).getImage();
@@ -54,14 +39,14 @@ public class int_lev1_info {
 		
 		//setting up the info panel
 		infoPanel = new JPanel();
-		infoPanel.setBounds(225, 150, 350, 270);
+		infoPanel.setBounds(190, 150, 400, 300);
 		infoPanel.setBackground(Color.red);
 		infoPanel.setLayout(null);
 		baseframe.add(infoPanel);
 
 		//setting up the infoLabel
-		infoLabel = new JLabel("<html>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level 1<br/> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time : 140 Seconds<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hit Target : 25<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum miss : 50<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hit the demon : +1<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on fire : -1<br/> <br/>&nbsp;&nbsp;Objective : Hit The Demon To &nbsp;&nbsp;Gain Points</html>");
-		infoLabel.setBounds(10,25, 330, 220);
+		infoLabel = new JLabel("<html>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level 1<br/> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time : 140 Seconds<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hit Target : 25<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum miss : 50<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hit the demon : +1<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on fire : -1<br/> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Objective : Hit The Demon To &nbsp;&nbsp;Gain Points</html>");
+		infoLabel.setBounds(10,25,370, 250);
 		infoLabel.setBackground(Color.yellow);
 		infoLabel.setForeground(Color.yellow);
 		infoLabel.setFont(font.pixelMplus);
@@ -81,17 +66,9 @@ public class int_lev1_info {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
-//				intStage.setVisible(false);
-//				infoPanel.setVisible(false);
-//				infoLabel.setVisible(false);
-//				goButton.setVisible(false);
-				
-				
+			
 				//linking to the gameZoneB1
 				new  gameZoneI1();
-//				gZB1.creator1();
-//				gZB1.creator();
 				
 			}
 
@@ -125,21 +102,7 @@ public class int_lev1_info {
 		});
 		baseframe.add(backButton);
 		
-		//helper
-//		frame.add(begStage);
-//		frame.add(infoPanel);
-//		frame.add(goButton);
 		
 	}
-	
-//	public class goHandler implements ActionListener{
-//
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			// TODO Auto-generated method stub
-//			
-//		}
-//		
-//	}
 	
 }

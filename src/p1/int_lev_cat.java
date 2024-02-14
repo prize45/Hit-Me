@@ -10,23 +10,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class int_lev_cat {
-	//helper
-//	private JFrame frame;
-	
+
 	private static JLabel intlevelTitle;
 	private font font = new font();
 	private static JButton playIlev1,playIlev2,backButton;
 	
 	public int_lev_cat(JFrame baseframe) {
- 		//helper
-// 		Setting up the frame	
-// 		frame = new JFrame("ByteSquad");
-// 		frame.setSize(800, 600);
-// 		frame.setVisible(true);
-// 		frame.getContentPane().setBackground(Color.black);
-// 		frame.setLayout(null);
-// 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-// 		frame.setLocationRelativeTo(null);
  		
  		//Setting up beglevelTitle
 		intlevelTitle = new JLabel("INTERMEDIATE LEVELS");

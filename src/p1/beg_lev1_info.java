@@ -12,145 +12,80 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class beg_lev1_info {
-	//helper
-//	JFrame frame;
-//	private goHandler gHandler = new goHandler();
-	//the Components
-		private font font = new font();
-		public static JLabel begStage,infoLabel;
-		public static JPanel infoPanel;
-		private Image demoIcon;
-		public static JButton goButton,backButton;
-		static int k=0;
-		
-		//The main class
-		public static void main(String args[]) {
-//			new beg_lev1_info();
-				
-		}
-		
+	// Components
+	private font font = new font();
+	public static JLabel begStage, infoLabel;
+	public static JPanel infoPanel;
+	private Image demoIcon;
+	public static JButton goButton, backButton;
+	static int k = 0;
 
-		//the constructor
-		public beg_lev1_info(JFrame baseframe) {
-			
-			//try to say timer is not cancellled
-			
-			//Setting up the frame	
-//			frame = new JFrame("ByteSquad");
-//			frame.setSize(800, 600);
-//			frame.setVisible(true);
-//			frame.getContentPane().setBackground(Color.black);
-//			frame.setLayout(null);
-//			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//			frame.setLocationRelativeTo(null);
-//			//Setting up the icon
-//			demoIcon = new ImageIcon(this.getClass().getResource("/Images/DEMON_1 _reZ.png")).getImage();//Imports the font file
-//			frame.setIconImage(demoIcon);
-			
+	// Constructor
+	public beg_lev1_info(JFrame baseframe) {
+		// Setting up the stageTitle image
+		begStage = new JLabel();
+		Image img = new ImageIcon(this.getClass().getResource("/Images/beginnerTitle.png")).getImage();
+		begStage.setIcon(new ImageIcon(img));
+		begStage.setBounds(310, 50, 200, 100); // Set the position and size of the label
+		baseframe.add(begStage);
 
-			//setting up the stageTitle image
-			begStage = new JLabel();
-			Image img = new ImageIcon(this.getClass().getResource("/Images/beginnerTitle.png")).getImage();
-			begStage.setIcon(new ImageIcon(img));
-			begStage.setBounds(310,50, 200, 100);
-			baseframe.add(begStage);
-			
-			
-			//setting up the info panel
-			infoPanel = new JPanel();
-			infoPanel.setBounds(225, 170, 350, 240);
-			infoPanel.setBackground(Color.red);
-			infoPanel.setLayout(null);
-			baseframe.add(infoPanel);
+		// Setting up the info panel
+		infoPanel = new JPanel();
+		infoPanel.setBounds(225, 170, 350, 240); // Set the position and size of the panel
+		infoPanel.setBackground(Color.red); // Set the background color of the panel
+		infoPanel.setLayout(null);
+		baseframe.add(infoPanel);
 
-			//setting up the infoLabel
-			infoLabel = new JLabel("<html>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level 1<br/> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time : 180 Seconds<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hit Target : 20<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum miss : 60<br/> <br/>&nbsp;&nbsp;Objective : Hit The Demon To &nbsp;&nbsp;Gain Points</html>");
-			infoLabel.setBounds(10,25, 330, 190);
-			infoLabel.setBackground(Color.yellow);
-			infoLabel.setForeground(Color.yellow);
-			infoLabel.setFont(font.pixelMplus);
-			infoLabel.setFont(infoLabel.getFont().deriveFont(Font.PLAIN,20f));
-			infoPanel.add(infoLabel);
-			
-			//setting up the goButton
-			goButton = new JButton("GO");
-			goButton.setBounds(370,460,60,35);
-			goButton.setForeground(Color.yellow);
-			goButton.setBackground(Color.red);
-			goButton.setFont(font.pixelMplus);
-			goButton.setFont(goButton.getFont().deriveFont(Font.PLAIN, 20f));
-			goButton.setBorderPainted(false);
-			goButton.setFocusPainted(false);
-			goButton.addActionListener(new ActionListener() {
-				
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					
-//					begStage.setVisible(false);
-//					infoPanel.setVisible(false);
-//					infoLabel.setVisible(false);
-//					goButton.setVisible(false);
-					
-					
-					//linking to the gameZoneB1
-					
-					new  gameZoneB1();
-					
-						
-						
-						
-				
-//					gZB1.creator1();
-//					gZB1.creator();
-					
-					
-					
-				}
+		// Setting up the infoLabel
+		infoLabel = new JLabel(
+				"<html>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level 1<br/> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time : 180 Seconds<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hit Target : 20<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum miss : 60<br/> <br/>&nbsp;&nbsp;Objective : Hit The Demon To &nbsp;&nbsp;Gain Points</html>");
+		infoLabel.setBounds(10, 25, 370, 200); // Set the position and size of the label
+		infoLabel.setBackground(Color.yellow); // Set the background color of the label
+		infoLabel.setForeground(Color.yellow); // Set the text color of the label
+		infoLabel.setFont(font.pixelMplus); // Set the font of the label
+		infoLabel.setFont(infoLabel.getFont().deriveFont(Font.PLAIN, 20f)); // Set the font size of the label
+		infoPanel.add(infoLabel);
 
-			});
-			baseframe.add(goButton);
-			
-			//backButton
-			backButton = new JButton("BACK");
-			backButton.setBounds(600,510,90,35);
-			backButton.setForeground(Color.yellow);
-			backButton.setBackground(Color.red);
-			backButton.setFont(font.pixelMplus);
-			backButton.setFont(backButton.getFont().deriveFont(Font.PLAIN, 20f));
-			backButton.setBorderPainted(false);
-			backButton.setFocusPainted(false);
-			backButton.addActionListener(new ActionListener() {
+		// Setting up the goButton
+		goButton = new JButton("GO");
+		goButton.setBounds(370, 460, 60, 35); // Set the position and size of the button
+		goButton.setForeground(Color.yellow); // Set the text color of the button
+		goButton.setBackground(Color.red); // Set the background color of the button
+		goButton.setFont(font.pixelMplus); // Set the font of the button
+		goButton.setFont(goButton.getFont().deriveFont(Font.PLAIN, 20f)); // Set the font size of the button
+		goButton.setBorderPainted(false); // Remove the border of the button
+		goButton.setFocusPainted(false); // Remove the focus paint of the button
+		goButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// Linking to the gameZoneB1
+				new gameZoneB1();
+			}
+		});
+		baseframe.add(goButton);
 
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					begStage.setVisible(false);
-					infoLabel.setVisible(false);
-					infoPanel.setVisible(false);
-					goButton.setVisible(false);
-					backButton.setVisible(false);
-					
-					//linking to stageCatalogue
-					new beg_lev_cat(baseframe);
-					
-				}
-				
-			});
-			baseframe.add(backButton);
-			
-			//helper
-//			frame.add(begStage);
-//			frame.add(infoPanel);
-//			frame.add(goButton);
-			
-		}
-		
-//		public class goHandler implements ActionListener{
-	//
-//			@Override
-//			public void actionPerformed(ActionEvent e) {
-//				// TODO Auto-generated method stub
-//				
-//			}
-//			
-//		}
+		// backButton
+		backButton = new JButton("BACK");
+		backButton.setBounds(600, 510, 90, 35); // Set the position and size of the button
+		backButton.setForeground(Color.yellow); // Set the text color of the button
+		backButton.setBackground(Color.red); // Set the background color of the button
+		backButton.setFont(font.pixelMplus); // Set the font of the button
+		backButton.setFont(backButton.getFont().deriveFont(Font.PLAIN, 20f)); // Set the font size of the button
+		backButton.setBorderPainted(false); // Remove the border of the button
+		backButton.setFocusPainted(false); // Remove the focus paint of the button
+		backButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				begStage.setVisible(false);
+				infoLabel.setVisible(false);
+				infoPanel.setVisible(false);
+				goButton.setVisible(false);
+				backButton.setVisible(false);
+
+				// Linking to stageCatalogue
+				new beg_lev_cat(baseframe);
+			}
+		});
+		baseframe.add(backButton);
+	}
 }

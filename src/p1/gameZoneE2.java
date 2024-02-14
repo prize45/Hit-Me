@@ -26,14 +26,12 @@ import p1.gameZoneB1.gamethread;
 
 
 public class gameZoneE2 extends JPanel{
-	//helpers
+	
 	static JFrame frame;
-//	static retryHandler rHandler = new  retryHandler();
-//	static mainMenuHandler mHandler = new  mainMenuHandler();
 	
 	//the Members
 	private static int LEV_MIN = 1; // in pixels
-    private static int LEV_SEC = 40; // in pixels
+    private static int LEV_SEC = 20; // in pixels
     private static final int IMG_WIDTH = 100; // in pixels
     private static final int IMG_HEIGHT = 100; // in pixels
     private static final int FIMG_WIDTH = 110; // in pixels
@@ -54,7 +52,7 @@ public class gameZoneE2 extends JPanel{
     private int bimgPositionX;
     private int bimgPositionY;
     private static int hitCount;
-    private static int HIT_TARGET = 5;
+    private static int HIT_TARGET = 40;
     private static int missCount;
     private static int Max_MISSES = 40;
     static Font pixelMplus;
@@ -66,6 +64,7 @@ public class gameZoneE2 extends JPanel{
     private StartStopTimer phone = new StartStopTimer();
     private static JButton pauseResumeButton ;
     pauseResumeHandler pRHandler = new  pauseResumeHandler();
+    private Image demonIcon;
     
     //The popup related components
     private static JFrame popupframe = new JFrame();
@@ -91,6 +90,10 @@ public class gameZoneE2 extends JPanel{
  		frame.setLayout(null);
  		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  		frame.setLocationRelativeTo(null);
+ 		
+		//Setting up the icon
+		demonIcon = new ImageIcon(this.getClass().getResource("/Images/DEMON_1 _reZ.png")).getImage(); // Setting up the frame icon
+		frame.setIconImage(demonIcon);
  		
     	//Setting up the Color
     	Color baseframeColor = null;
@@ -228,85 +231,13 @@ public class gameZoneE2 extends JPanel{
     				frame.dispose();
     				popupframe.dispose();
     				
-    				//Closing the popup and gameZoneB1
-//    				popupframe.dispose();
-//    				phone.timedisplayer.setVisible(false);
-//    				hitmissLabel.setVisible(false);
-//    				pauseResumeButton.setVisible(false);
-//    				dashPanel.setVisible(false);
-//    				setVisible(false);
-//    				
-//    				//try to say timer is not cancelled
-//    				
-//    				imgPositionX = 0; 
-//    				imgPositionY = 0;
-//    				flag1 = true;
-//    				 flag2 = true;
-//    				 flag4 = true;
-//    				hitCount = 0;
-//    				missCount = 0;
-//    				hitmissLabel.setText("Hit: " + hitCount + "   Miss: " + (Max_MISSES - missCount));
-//    			     phone.cancelTimer();
-//    				
-//    				//Linking new gameZone
-//    				new  beg_lev1_info(frame);
-//    				
-//    				
-//    				//Linking up the beg_lev1_info
-////    				gameZoneB1 alkfalk  = new gameZoneB1(baseframe);
-////    				new beg_lev1_info(baseframe); 
-////    				new gameZoneB1copy1(baseframe);
-//    				
-//    				beg_lev1_info.begStage.setVisible(true);
-//    				beg_lev1_info.infoPanel.setVisible(true);
-//    				beg_lev1_info.infoLabel.setVisible(true);
-//    				beg_lev1_info.goButton.setVisible(true);
-    				
+   		
     				
     				
     			}
         		
         	});
-        	
-//        	//MainMenu Button
-//        	mainMenuButton =  new JButton("MAIN MENU");
-//        	mainMenuButton.setBounds(270,170,130,30);
-//        	mainMenuButton.setForeground(Color.black);
-//        	mainMenuButton.setBackground(Color.red);
-//        	mainMenuButton.setFont(pixelMplus);
-//        	mainMenuButton.setFont(mainMenuButton.getFont().deriveFont(Font.BOLD, 20f));
-//        	mainMenuButton.setBorderPainted(false);
-//        	mainMenuButton.setFocusPainted(false);
-//        	mainMenuButton.addActionListener(new ActionListener() {
-//
-//    			@Override
-//    			public void actionPerformed(ActionEvent e) {
-//    					
-//    			}
-//        		
-//        	});
-//        	
-//        	
-//          	//next button
-//        	nextButton =  new JButton("NEXT");
-//        	nextButton.setBounds(140,110,120,40);
-//        	nextButton.setForeground(Color.black);
-//        	nextButton.setBackground(Color.white);
-//        	nextButton.setFont(pixelMplus);
-//        	nextButton.setFont(nextButton.getFont().deriveFont(Font.BOLD, 20f));
-//        	nextButton.setBorder(new MatteBorder(4, 4, 4, 4, Color.black));
-////        	nextButton.setBorderPainted(false);
-//        	nextButton.setFocusPainted(false);
-//        	nextButton.addActionListener(new ActionListener() {
-//
-//    			@Override
-//    			public void actionPerformed(ActionEvent e) {
-//    				
-//    			
-//    			}
-//        		
-//        	});   	
-
+       
     }
     
     
@@ -444,7 +375,7 @@ public class gameZoneE2 extends JPanel{
         	
         	//adding the Buttons
         	popupframe.add(okButton);
-//        	popupframe.add(mainMenuButton);
+
         	
 
         }
@@ -469,29 +400,11 @@ public class gameZoneE2 extends JPanel{
         	
         	//Adding up the Buttons
           	popupframe.add(okButton);
-//        	popupframe.add(mainMenuButton);
+
         	
         }
         
-        
-        public static class retryHandler implements ActionListener{
 
-    		@Override
-    		public void actionPerformed(ActionEvent e) {
-    			// TODO Auto-generated method stub
-    			
-    		}
-    		
-    	}
-        
-        public static class mainMenuHandler implements ActionListener{
-
-    		@Override
-    		public void actionPerformed(ActionEvent e) {
-    			// TODO Auto-generated method stub
-    		}
-    		
-    	}
         
         
 }//End of class

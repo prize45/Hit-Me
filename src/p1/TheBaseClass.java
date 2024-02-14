@@ -28,37 +28,36 @@ public TheBaseClass() {
 		baseframe.setLayout(null);
 		baseframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		baseframe.setLocationRelativeTo(null);
-		//Committed in 5 minutes
 		
 		//Setting up the title image
 		title = new JLabel();
 		Image img0 = new ImageIcon(this.getClass().getResource("/Images/Title.png")).getImage();
 		title.setIcon(new ImageIcon(img0));
-		title.setBounds(295, 270, 400, 100);
+		title.setBounds(295, 270, 400, 100); // Positioning the title image
 		baseframe.add(title);
 		
 		//Adding enter Button
 		enterButton =  new JButton("ENTER");
-		enterButton.setBounds(350,420,110,30);
+		enterButton.setBounds(350,420,110,30); // Positioning the enter button
 		enterButton.setForeground(Color.yellow);
 		enterButton.setBackground(Color.red);
 		
-		enterButton.setFont(font.pixelMplus);
-		enterButton.setFont(enterButton.getFont().deriveFont(Font.BOLD, 20f));
-		enterButton.setBorderPainted(false);
-		enterButton.setFocusPainted(false);
-		enterButton.addActionListener(tHandler);
+		enterButton.setFont(font.pixelMplus); // Setting the font for the enter button
+		enterButton.setFont(enterButton.getFont().deriveFont(Font.BOLD, 20f)); // Setting the font size and style
+		enterButton.setBorderPainted(false); // Removing border from the button
+		enterButton.setFocusPainted(false); // Removing focus border
+		enterButton.addActionListener(tHandler); // Adding action listener to the button
 		baseframe.add(enterButton);
 		
 		//Setting up the icon
-		demonIcon = new ImageIcon(this.getClass().getResource("/Images/DEMON_1 _reZ.png")).getImage();//Imports the font file
+		demonIcon = new ImageIcon(this.getClass().getResource("/Images/DEMON_1 _reZ.png")).getImage(); // Setting up the frame icon
 		baseframe.setIconImage(demonIcon);
 		
-//		//Adding the Image to the Home page
+		//Adding the Image to the Home page
 		demon1 = new JLabel();
 		Image img1 = new ImageIcon(this.getClass().getResource("/Images/DEMON_1 _reZ.png")).getImage();
 		demon1.setIcon(new ImageIcon(img1));
-		demon1.setBounds(350, 140, 110, 122);  //Image sizes are crucial
+		demon1.setBounds(350, 140, 110, 122);  // Positioning the demon image
 		baseframe.add(demon1);
 	}
 	
@@ -71,17 +70,6 @@ public TheBaseClass() {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-			//Helper
-//			title.setVisible(false);
-//			demon1.setVisible(false);
-//			enterButton.setVisible(false);
-//			frame.dispose();
-//			MenuPage try1 =new MenuPage();
-
-			
-			//IntegrationPhase
 			title.setVisible(false);
 			demon1.setVisible(false);
 			enterButton.setVisible(false);
@@ -90,6 +78,5 @@ public TheBaseClass() {
 		}
 		
 	}
-    
     
 }

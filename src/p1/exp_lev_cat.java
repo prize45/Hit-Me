@@ -10,27 +10,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class exp_lev_cat {
-	//helper
-//	private JFrame frame;
 	
 	private static JLabel explevelTitle;
 	private font font = new font();
 	private static JButton playElev1,playElev2,backButton;
 	
 	public exp_lev_cat(JFrame baseframe) {
- 		//helper
-// 		Setting up the frame	
-// 		frame = new JFrame("ByteSquad");
-// 		frame.setSize(800, 600);
-// 		frame.setVisible(true);
-// 		frame.getContentPane().setBackground(Color.black);
-// 		frame.setLayout(null);
-// 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-// 		frame.setLocationRelativeTo(null);
  		
  		//Setting up beglevelTitle
 		explevelTitle = new JLabel("EXPERT LEVELS");
-		explevelTitle.setBounds(250, 50, 400, 70);
+		explevelTitle.setBounds(260, 50, 400, 70);
 		explevelTitle.setBackground(Color.red);
 		explevelTitle.setForeground(Color.red);
 		explevelTitle.setFont(font.pixelMplus);

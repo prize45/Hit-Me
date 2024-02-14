@@ -15,44 +15,24 @@ public class scoreboard {
 	private font font = new font();
 	
 	public scoreboard(JFrame baseframe) {
-		//helper
- 		//Setting up the frame	
-// 		frame = new JFrame("ByteSquad");
-// 		frame.setSize(800, 600);
-// 		frame.setVisible(true);
-// 		frame.getContentPane().setBackground(Color.black);
-// 		frame.setLayout(null);
-// 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-// 		frame.setLocationRelativeTo(null);
-		
  		
  		//setting up backButton
  		backButton = new JButton("BACK");
- 		backButton.setBounds(600,510,90,35);
- 		backButton.setForeground(Color.yellow);
- 		backButton.setBackground(Color.red);
- 		backButton.setFont(font.pixelMplus);
- 		backButton.setFont(backButton.getFont().deriveFont(Font.PLAIN, 20f));
- 		//Setting the border curve try 1
-// 					exitButton.setBorder(new RoundedBorder(10));
- 		backButton.setBorderPainted(false);
- 		backButton.setFocusPainted(false);
+ 		backButton.setBounds(600,510,90,35); // Set the position and size of the button
+ 		backButton.setForeground(Color.yellow); // Set the text color of the button
+ 		backButton.setBackground(Color.red); // Set the background color of the button
+ 		backButton.setFont(font.pixelMplus); // Set the font of the button
+ 		backButton.setFont(backButton.getFont().deriveFont(Font.PLAIN, 20f)); // Set the font size of the button
+ 		backButton.setBorderPainted(false); // Remove the border of the button
+ 		backButton.setFocusPainted(false); // Remove the focus paint of the button
  		backButton.addActionListener(new ActionListener() {
-
- 					@Override
- 				public void actionPerformed(ActionEvent e) {
- 						//SetVisible
- 						backButton.setVisible(false);
- 						
- 						//Linking to MenuPage page
- 						new MenuPage(baseframe);
- 						
- 						
- 				}
- 				
+ 			@Override
+ 			public void actionPerformed(ActionEvent e) {
+ 				backButton.setVisible(false); // Hide the button
+ 				new MenuPage(baseframe); // Link to the MenuPage
+ 			}
  		});
-// 		baseframe.add(backButton);
- 		baseframe.add(backButton);
+ 		baseframe.add(backButton); // Add the button to the baseframe
 	}
 	
 	public static void main(String[]args) {
