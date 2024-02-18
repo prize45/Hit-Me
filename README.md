@@ -1,15 +1,9 @@
-Repository Title: "Hit Me - Java GUI Game"
+#Hit-me
 
-Table of Contents:
+This repository consists of the source code for the simple GUI-based game "Hit-me."
 
-Introduction
+The game has 3 levels: beginner, intermediate, and expert, each consisting of 2 tasks. In all these levels, as the user clicks (hits) the demon, he gains points. Intermediate level adds a diversion with a moving fire, clicking on which the user loses a point. The expert level adds a moving bomb; a click on it ends the game. Different hit targets, miss targets, and time constraints add to the increasing complexity as the user floats across levels. The user can change the background color and switch on or off music as per his licking.
 
-Brief description of the game "Hit Me." Mention that it's a Java GUI-based game with three levels, enemy appearances, and a scoring system. Highlight the interactive nature of the game where players score points by clicking on appearing enemies.
+The game is built using Java's GUI kit, i.e., Swings and Awt.
 
-Features
-
-List and describe the key features of the game. Three levels of difficulty. Enemies appearing every second. Click-based killing mechanism. Scoring system. Timed gameplay with sounds.
-
-Technology Stack
-
-List the technologies and libraries used in the project. Java Swing (for GUI)
+The game may further add a scoreboard and login feature in its future development.
