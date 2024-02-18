@@ -1,4 +1,4 @@
-#Hit-me
+# Hit-me
 
 This repository consists of the source code for the simple GUI-based game "Hit-me."
 
